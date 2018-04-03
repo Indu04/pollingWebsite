@@ -13,16 +13,16 @@ import 'rxjs/add/observable/interval';
 export class PollingPageComponent implements OnInit{
 
   ngOnInit(){
-    Observable.interval(1000 * 60).subscribe(x => {this.showM1(this.matchInfo.Time); this.showM2(this.matchInfo2.Time)});
+    Observable.interval(10 * 60).subscribe(x => {this.showM1(this.matchInfo.Time); this.showM2(this.matchInfo2.Time)});
   }
 
-  matchInfo = {team1:'RCB', team2:'CSK', Venue: 'Bangalore' ,Date: '24th April 2018', Time: '16:00'};
-  
   showPollM1 = true;
   showPollM2 = true;
   url = 'assets/';
 
-
+  // these vals will come from db or table
+  matchInfo = {team1:'RCB', team2:'CSK', Venue: 'Bangalore' ,Date: '24th April 2018', Time: '16:00'};
+  
   form = new FormGroup({
       name: new FormControl('',[Validators.required,]), // Default validation
       selectTeam: new FormControl('', [Validators.required,]), // Default validation
@@ -49,8 +49,12 @@ export class PollingPageComponent implements OnInit{
   }
 
 // ############################################################################################################
-  // matchInfo2 = {team1:'DD', team2:'RR', Venue: 'Delhi' ,Date: '24th April 2018', Time: '20:00'};
-  matchInfo2 = null;
+
+  // these vals will come from db or table
+  matchInfo2 = {team1:'DD', team2:'RR', Venue: 'Delhi' ,Date: '24th April 2018', Time: '20:00'};
+
+  //  if no 2nd match following this format as a workaround to avoid issue in ngOnInit() - Observable.interval  
+  // matchInfo2 = {team1: null, team2: null, Venue: null ,Date: null, Time: '00:00'};
 
   form2 = new FormGroup({
       name2: new FormControl('',[Validators.required,]), // Default validation

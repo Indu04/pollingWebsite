@@ -28,10 +28,10 @@
         </form>
 </div>
 <div  *ngIf="showPollM1 == null">
-        show after polling cut-off time
+        TODO: show after polling cut-off time
 </div>
 <!-- ######################################################################################################################################### -->
-<div class = "Polling" *ngIf="(matchInfo2 && showPollM2)">
+<div class = "Polling" *ngIf="(matchInfo2.Date && showPollM2)">
         <mat-card>
                 <mat-card-header>
                         <mat-card-title>{{ matchInfo2.team1 }} vs {{ matchInfo2.team2 }}</mat-card-title>
@@ -60,6 +60,6 @@
                 <button mat-raised-button  style="margin-left:270px;" color="primary" (click)="submitValue2()">Submit</button> 
         </form>
 </div>
-<div  *ngIf="(matchInfo2 && showPollM1 == null)">
-        show after polling cut-off time
+<div  *ngIf="(matchInfo2.Date && showPollM1 == null)">
+        TODO: show after polling cut-off time
 </div>
