@@ -1,0 +1,119 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="MatchID">
+      <mat-header-cell *matHeaderCellDef> MID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.MatchID}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Date">
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Time">
+      <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Venue">
+      <mat-header-cell *matHeaderCellDef> Venue </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Venue}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Team1">
+      <mat-header-cell *matHeaderCellDef> Team1 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Team1}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Team2">
+      <mat-header-cell *matHeaderCellDef> Team2 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Team2}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Points">
+      <mat-header-cell *matHeaderCellDef> Points </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Points}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="WT">
+      <mat-header-cell *matHeaderCellDef> WT </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.WT}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Ratio">
+      <mat-header-cell *matHeaderCellDef> Ratio </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Ratio}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Sachin">
+      <mat-header-cell *matHeaderCellDef> Sachin </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Sachin}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Amit">
+      <mat-header-cell *matHeaderCellDef> Amit </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Amit}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Indu">
+      <mat-header-cell *matHeaderCellDef> Indu </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Indu}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Satish">
+      <mat-header-cell *matHeaderCellDef> Satish </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Satish}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Vijay">
+      <mat-header-cell *matHeaderCellDef> Vijay </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Vijay}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Rakesh">
+      <mat-header-cell *matHeaderCellDef> Rakesh </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Rakesh}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Rakshitha">
+      <mat-header-cell *matHeaderCellDef> Raks </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Rakshitha}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Pawan">
+      <mat-header-cell *matHeaderCellDef> Pawan </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Pawan}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Divya">
+      <mat-header-cell *matHeaderCellDef> Divya </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Divya}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Viji">
+      <mat-header-cell *matHeaderCellDef> Viji </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Viji}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Selvi">
+      <mat-header-cell *matHeaderCellDef> Selvi </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Selvi}} </mat-cell>
+    </ng-container>
+	
+	  <ng-container matColumnDef="Vivek">
+      <mat-header-cell *matHeaderCellDef> Vivek </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Vivek}} </mat-cell>
+    </ng-container>
+	
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
